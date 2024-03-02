@@ -9,12 +9,21 @@ setColor color = setSGR [SetColor Foreground Vivid color]
 
 convertColor :: String -> Color --Used to set Color is one found
 convertColor "Red" = Red 
+convertColor "Blue" = Blue 
+convertColor "Black" = Black 
+convertColor "Green" = Green
+convertColor "Yellow" = Yellow
+convertColor "Magenta" = Magenta 
+convertColor "Cyan" = Cyan
 convertColor _ = White
 
 
 main :: IO ()
 
 main = do 
+ 
+
+ putStrLn ("")
  putStrLn "Input Text Output"
 
  textOutput <- getLine
@@ -25,7 +34,9 @@ main = do
  colorOutput <- getLine
  
 
- convertColor colorOutput
+ let color = convertColor colorOutput
  
+ setColor color
 
+ putStrLn ("")
  putStrLn (textOutput)
