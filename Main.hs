@@ -9,12 +9,21 @@ setColor color = setSGR [SetColor Foreground Vivid color] -- sets color to displ
 
 convertColor :: String -> Color --Used to set Color is one found
 convertColor "Red" = Red 
+convertColor "red" = Red 
 convertColor "Blue" = Blue 
+convertColor "blue" = Blue 
 convertColor "Black" = Black 
+convertColor "black" = Black 
 convertColor "Green" = Green
+convertColor "green" = Green
 convertColor "Yellow" = Yellow
+convertColor "yellow" = Yellow
 convertColor "Magenta" = Magenta 
+convertColor "magenta" = Magenta 
+convertColor "Purple" = Magenta 
+convertColor "purple" = Magenta 
 convertColor "Cyan" = Cyan
+convertColor "cyan" = Cyan
 convertColor _ = White -- Sets each color to its Corresponding Color
 
 
