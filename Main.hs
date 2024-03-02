@@ -23,11 +23,16 @@ main :: IO ()
 main = do 
  
 
+
  putStrLn ("")
  putStrLn "Input Text Output"
 
  textOutput <- getLine
 
+ putStrLn ""
+ putStrLn "Available Colors"
+ putStrLn "Red - Blue - Black - Green - Yellow - Magenta - Cyan - White"
+ putStrLn ""
 
  putStrLn "Input Text Color"
 -- colorOutput <- getLine
