@@ -1,0 +1,22 @@
+name: Lambda Checker
+
+on:
+  push:
+    branches:
+      - main  # Adjust this if you're using a different main branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Pull & Run Container
+      run: | 
+          docker run --rm  \
+            -v ${{ github.workspace }}:/app \
+            -w /app \
+            omniladder/lambda-check \
+            Lambda-Check
